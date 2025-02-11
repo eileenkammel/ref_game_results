@@ -1,0 +1,5 @@
+,"-, clemscore","all, Average % Played","all, Average Quality Score","multimodal_referencegame, % Played","multimodal_referencegame, Quality Score","multimodal_referencegame, Quality Score (std)"
+InternVL2-40B-t0.0--InternVL2-40B-t0.0,23.33,97.08,24.03,97.08,24.03,42.82
+InternVL2-8B-t0.0--InternVL2-8B-t0.0,27.91,97.5,28.63,97.5,28.63,45.3
+InternVL2-Llama3-76B-t0.0--InternVL2-Llama3-76B-t0.0,26.24,98.33,26.69,98.33,26.69,44.33
+idefics-80b-instruct-t0.0--idefics-80b-instruct-t0.0,23.75,100.0,23.75,100.0,23.75,42.64

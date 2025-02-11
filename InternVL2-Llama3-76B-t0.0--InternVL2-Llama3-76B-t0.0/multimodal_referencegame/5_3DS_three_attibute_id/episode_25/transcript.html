@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* This CSS is an adaptation from the answer by Roko C. Buljan in https://stackoverflow.com/a/71155446 */ 
+
+* {margin: 0; box-sizing: border-box;}
+
+body {background-color: rgb(157, 152, 150);}
+
+  /* dialogue header */
+
+.top-info {
+  text-align: center;
+  --rad: 20px;
+  --rad-sm: 3px;
+  font: 20px/1.5 sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  background: #3f3e3e;
+  color: #fff;
+}
+
+.chat {
+    --rad: 20px;
+    --rad-sm: 3px;
+    font: 16px/1.5 sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+  }
+  
+  .msg {
+    position: relative;
+    max-width: 75%;
+    padding: 7px 15px;
+    margin-bottom: 30px;
+  }
+  
+  /* 5 levels, two players to/from game master and meta messages form game master */
+
+  .msg.b-gm {
+    border-radius: var(--rad) var(--rad-sm) var(--rad-sm) var(--rad);
+    background: #874aaf;
+    color: #fff;
+    margin-left: 60%;
+  }
+
+  .msg.a-gm {
+    border-radius: var(--rad-sm) var(--rad) var(--rad) var(--rad-sm);
+    background: #f39109;
+    color: #fff;
+    margin-right: 60%;
+  }
+  
+  .msg.gm-a {
+    border-radius: var(--rad) var(--rad-sm) var(--rad-sm) var(--rad);
+    background: #c4c3c3;    
+    color: #0c0c0c;
+    margin-right: 40%;
+    margin-left: 20%;
+  }
+
+  .msg.gm-b {
+    border-radius: var(--rad-sm) var(--rad) var(--rad) var(--rad-sm);
+    background: #c4c3c3;
+    color: #0c0c0c;
+    margin-right: 20%;
+    margin-left: 40%;
+  }
+
+  .msg.gm-gm {
+    background: #f1f1f1;
+    color: #373636;
+    margin-left: 40%;
+    margin-right: 40%;
+    font-size: 0.8rem;
+
+  }
+  
+  /* speaker labels */
+  
+  .msg::before {
+    content: attr(speaker);
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 100%;
+    color: #888;
+    white-space: nowrap;
+
+  }
+  
+  .msg.b-gm::before {
+    right: 15px;
+  }
+
+  .msg.gm-a::before {
+    right: 15px;
+  }
+
+  .msg.a-gm::before {
+    left: 15px;
+  }
+
+  .msg.gm-b::before {
+    left: 15px;
+  }
+
+  .msg.gm-gm::before {
+    left: 0px;
+  }
+  
+
+    </style>
+</head>
+<body>
+
+<br/>
+
+<div class="top-info">
+    <p>Interaction Transcript for 3DS_three_attibute_id, episode 26 with InternVL2-Llama3-76B-t0.0--InternVL2-Llama3-76B-t0.0.</p>
+</div>
+
+<br/>
+
+<div class="chat">
+<div speaker="Game Master to Player 1" class="msg gm-a">
+  <p>{&#x27;role&#x27;: &#x27;user&#x27;, &#x27;content&#x27;: &#x27;You play a game where you and another player see the same four images but in different orders. \nYour task is to describe one image so that the other player can identify it. \nYou both win if the other player picks the correct image based on your description. \n\nDescribe the third image.\n\nBegin your description with &quot;Description: &quot;. Say no more than what\&#x27;s absolutely needed to make the distinction. There is no need to explain your reasoning.&#x27;, &#x27;stimuli_id&#x27;: 1389, &#x27;image&#x27;: [&#x27;games/multimodal_referencegame/resources/3ds_images/13607.png&#x27;, &#x27;games/multimodal_referencegame/resources/3ds_images/15386.png&#x27;, &#x27;games/multimodal_referencegame/resources/3ds_images/13604.png&#x27;, &#x27;games/multimodal_referencegame/resources/3ds_images/13603.png&#x27;]}</p>
+  <a title="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/13607.png"><img style="width:100%" src="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/13607.png" alt="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/13607.png" /></a>
+  <a title="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/15386.png"><img style="width:100%" src="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/15386.png" alt="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/15386.png" /></a>
+  <a title="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/13604.png"><img style="width:100%" src="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/13604.png" alt="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/13604.png" /></a>
+  <a title="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/13603.png"><img style="width:100%" src="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/13603.png" alt="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/13603.png" /></a>
+</div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>Description: The image shows a yellow sphere and a yellow cylinder placed on a purple ground with a blue background.</p>
+    </div>
+
+    <div speaker="Game Master: parse" class="msg gm-gm">
+        <p>Description: The image shows a yellow sphere and a yellow cylinder placed on a purple ground with a blue background.</p>
+    </div>
+<div speaker="Game Master to Player 2" class="msg gm-b">
+  <p>{&#x27;role&#x27;: &#x27;user&#x27;, &#x27;content&#x27;: &#x27;You play a game where you and another player see the same four images but in different orders. You also get a description from the other player describing one of the images. \nYou both win if you pick the correct image based on the other player\&#x27;s description.\n\nHere is the description:\nDescription: The image shows a yellow sphere and a yellow cylinder placed on a purple ground with a blue background.\nWhich image fits the description?\n\nBegin your selection with &quot;Selection: &quot;. Say only the number of your selected image (first, second, third, fourth). There is no need to explain your reasoning.&#x27;, &#x27;stimuli_id&#x27;: 1389, &#x27;image&#x27;: [&#x27;games/multimodal_referencegame/resources/3ds_images/15386.png&#x27;, &#x27;games/multimodal_referencegame/resources/3ds_images/13604.png&#x27;, &#x27;games/multimodal_referencegame/resources/3ds_images/13607.png&#x27;, &#x27;games/multimodal_referencegame/resources/3ds_images/13603.png&#x27;]}</p>
+  <a title="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/15386.png"><img style="width:100%" src="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/15386.png" alt="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/15386.png" /></a>
+  <a title="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/13604.png"><img style="width:100%" src="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/13604.png" alt="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/13604.png" /></a>
+  <a title="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/13607.png"><img style="width:100%" src="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/13607.png" alt="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/13607.png" /></a>
+  <a title="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/13603.png"><img style="width:100%" src="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/13603.png" alt="/project/kkoshti/ba/test2/test/games/multimodal_referencegame/resources/3ds_images/13603.png" /></a>
+</div>
+
+    <div speaker="Player 2 to Game Master" class="msg b-gm">
+        <p>Selection: 3</p>
+    </div>
+
+    <div speaker="Game Master: parse" class="msg gm-gm">
+        <p>Selection: 3</p>
+    </div>
+
+    <div speaker="Game Master: expected answer" class="msg gm-gm">
+        <p>[&#x27;second&#x27;, &#x27;2&#x27;, &#x27;2nd&#x27;]</p>
+    </div>
+
+</div>
+
+</body>
+</html>
